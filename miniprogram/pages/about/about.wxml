@@ -1,0 +1,34 @@
+<view class="logo">
+  <image src="https://ftp.bmp.ovh/imgs/2021/10/9603399be3dea6dc.jpeg"></image>
+  <view class="content">
+    <text>路漫漫其修远兮，</text>
+    <text>吾将上下而求索。</text>
+  </view>
+</view>
+<van-divider borderColor="#00897b" />
+
+<view class="sourceContainer">
+  <view class="source">
+    <view class="icon">
+      <text class="iconfont icon-github" bindtap="toGithub"></text>
+      <text class="iconfont icon-gitee" bindtap="toGitee"></text>
+    </view>
+    <text class="star">本项目已开源，可以点击左边链接跳转到我的源代码仓库哦</text>
+  </view>
+</view>
+
+<van-popup show="{{showGithub}}" closeable position="bottom" custom-style="height: 40%" bind:close="onClose">
+  <view class="githubContainer">
+    <text class="tip">由于微信的规定，请手动复制链接或通过二维码进入项目地址</text>
+    <text class="githubTitle" user-select>https://github.com/zl-maker/todo</text>
+    <image class="githubImg" src="https://ftp.bmp.ovh/imgs/2021/10/22cbda5f1f8b9d44.png" mode="aspectFit" show-menu-by-longpress></image>
+  </view>
+</van-popup>
+
+<van-popup show="{{showGitee}}" closeable position="bottom" custom-style="height: 40%" bind:close="onClose">
+  <view class="giteeContainer">
+    <text class="tip">由于微信的规定，请手动复制链接或通过二维码进入项目地址</text>
+    <text class="giteeTitle" user-select>https://gitee.com/zl-maker/to</text>
+    <image class="giteeImg" src="https://ftp.bmp.ovh/imgs/2021/10/e2bffc8be061aac6.png" mode="aspectFit" show-menu-by-longpress></image>
+  </view>
+</van-popup>
